@@ -1,0 +1,1 @@
+First file for the Helsinki FullStack Developers course by Elfynity
