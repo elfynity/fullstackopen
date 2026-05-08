@@ -1,0 +1,34 @@
+Sequence Diagram
+
+browser -> server POST to : 	https://studies.cs.helsinki.fi/exampleapp/new_note
+activate server
+server -> browser : html document
+
+browser -> server GET : /exampleapp/notes
+activate server
+server -> browser : redirect
+deactivate server
+
+browser -> server GET : /exampleapp/main.css
+activate server
+server -> browser : css stylesheet
+deactivate server
+
+browser -> server GET : /exampleapp/main.js
+activate server
+server -> browser : js - javascript
+deactivate server
+
+browser -> server GET : /exampleapp/data.json
+activate server
+server -> browser : json
+deactivate server
+
+browser -> server GET : /favicon.ico
+activate server
+server -> browser : ico
+deactivate server
+
+
+Notes: The form submit causes the browser to send information to the server and a redirect. The new page requests the next items from the server which the server sends to the browser.
+
