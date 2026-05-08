@@ -1,0 +1,28 @@
+Sequence Diagram
+
+browser -> server GET : https://studies.cs.helsinki.fi/exampleapp/spa
+activate server
+server -> browser : html document
+deactivate server
+
+browser -> server GET : /exampleapp/main.css
+activate server
+server -> browser : CSS Stylesheet
+deactivate server
+
+browser -> server GET : exampleapp/spa.js
+activate server
+server -> browser : js - javascript
+deactivate server
+
+browser -> server GET : /exampleapp/data.json
+activate server
+server -> browser : json
+deactivate server
+
+browser -> server GET : /favicon.ico
+activate server
+server -> browser : ico
+deactivate server
+
+
