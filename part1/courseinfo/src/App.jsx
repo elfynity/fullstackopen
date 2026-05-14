@@ -1,34 +1,27 @@
-const Hello = ({name, age}) => {
-  const bornYear = () => new Date().getFullYear() - age
-  
-
-  const whatAge = () => 10 + age
-
-
-  return (
-    <div>
-      <p>Hello {name}, you are {age} years old</p>
-      <p>Probable year of birth: {bornYear()}</p>
-      <p>In 2036, you will be {whatAge()}</p>
-      <hr />
-    </div>
-  )
-}
+import { useState } from 'react'
 
 
 
 const App = () => {
-  const name = 'Licky'
-  const age = 14
+
+  const [ counter, setCounter ] = useState(0)
+  const increaseByOne = () => setCounter(counter + 1)
+  const reset = () => setCounter(0)
 
   return (
-    <div>
-      <h1>Greetings</h1>
-      <Hello name="Wendy" age={51} />
-      <Hello name={name} age={age} />
-      <Hello name="Leah" age={28} />
-    </div>
+    <>
+    <div>{counter}</div>
+
+    <button onClick={increaseByOne}>
+      plus
+    </button>
+
+    <button onClick={reset}>
+    Reset
+    </button>
+
+    </>
   )
 }
 
-export default App;
+export default App
